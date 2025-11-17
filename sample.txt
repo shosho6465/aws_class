@@ -1,3 +1,7 @@
 안녕하세요
 CLONE COMMIT PUSH PULL
 문서 > AWS Class > home 폴더 만들어서  clone 하기
+학원에 오자마자 fetch origin 클릭 후 pull 할 것이 있으면 pull 
+학원에서 수업할 땐 commit, push
+집에서 fetch origin 클릭 후 pull
+복습을 하면  commit, push 
