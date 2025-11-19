@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>연습 예제</title>
+
+	<style>
+		*{color: #000; text-decoration: none;}
+    .메뉴1:hover{color: #f00; text-decoration: underline;}
+		.메뉴2:hover{color: #0f0; font-weight: bold;}
+
+		[class^=메뉴] a{color: #000; text-decoration: none;}
+		
+	</style>
+
+</head>
+<body>
+	<!-- 
+	다음이 만족되도록 스타일을 적용하세요. 단, 필요시 class를 추가해도 됨
+	1. 모든 메뉴의 글자색을 검은색, 밑줄 없음으로 변경.
+	2. 메뉴1-1~메뉴1~3은 hover하면 빨강, 밑줄
+	3. 메뉴2-1~메뉴2-3은 hover하면 녹색, 글자 두껍게
+	 -->
+	<ul class="메뉴1">
+		<li>
+			<a href="#" class="link">메뉴1-1</a>
+		</li>
+		<li>
+			<a href="#" class="link">메뉴1-2</a>
+		</li>
+		<li>
+			<a href="#" class="link">메뉴1-3</a>
+		</li>
+	</ul>
+	<ul class="메뉴2">
+		<li>
+			<a href="#" class="link">메뉴2-1</a>
+		</li>
+		<li>
+			<a href="#" class="link">메뉴2-2</a>
+		</li>
+		<li>
+			<a href="#"class="link">메뉴2-3</a>
+		</li>
+	</ul>
+	
+</body>
+</html>

@@ -19,17 +19,29 @@
 	-class="A-B" X
 	-class="B-A" X
 	-class="B A" O
-	-class="AB" X
-	-class="BA" X
+	-class="AB"  X
+	-class="BA"  X
 	
 	[속성ㅣ=A]
 	-속성의 값이 A-단어로 시작된 요소
 	-class="A B" X
-	-class="A-B" X
-	-class="B-A" O
-	-class="B A" O
+	-class="A-B" o
+	-class="B-A" x
+	-class="B A" x
 	-class="AB"  X
-  -class="BA"  O
+  -class="BA"  x
+
+	[속성^=A]
+	-속성의 값이 A로 시작하는 요소를 선택
+	-class="A B" o
+	-class="A-B" o
+	-class="B-A" x
+	-class="B A" x
+	-class="AB" o
+	-class="BA" x
+	
+
+	[속성&=A]
 
 	[속성*=A]
 	-속성의 값이 A를 포함하는 요소를 선택
