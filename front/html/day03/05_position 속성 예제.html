@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+	<title>position 속성 예제</title>
+	<style>
+		.container,
+		.container2{
+			border: 3px solid black; padding: 100px;
+		}
+		.box{width: 100px; height: 100px; background-color: yellow; 
+		    line-height: 100px; text-align: center; font-size: 30px;
+				border: 1px solid black; display: inline-block;
+			  vertical-align: bottom;
+			  position: relative;
+			}
+		.container div:nth-of-type(1){
+			  top: 50px;
+		}
+		.container div:nth-of-type(2){
+			  top: -50px;
+		}
+		.container div:nth-of-type(3){
+			  left: 50px;
+		}
+		.container div:nth-of-type(4){
+			  right: -50px;
+		}
+		.container div:nth-of-type(5){
+			  left: 50px; bottom: 50px;
+		}
+    .container2 [class^=box]{
+			background: skyblue; position: absolute;
+		}
+		.box1{
+			top: 0; left: 0;
+		}
+		.inner-container{
+			position: relative; height: 300px;
+		}
+		.box2{
+			width: 100px; height: 100px; top: 0; right: 0;
+		}
+		.box3{
+			top: 150; bottom: 0; left: 0; right: 0;
+		}
+
+	.box5{position: fixed;
+	      width: 100px; height: 100px; border: 1px solid black; background-color: yellow
+				bottom: 20px; right: 20px
+			}
+	</style>
+</head>
+<body>
+	<!--  
+	position 속성 예제
+	요소를 배치하는 방식을 지정하는 속성
+	-값
+	 -static: 기본값
+	 -fixed
+	  -요소를 브라우저를 기준으로 위치를 고정
+		-위로가기 버튼
+		-top, botton, left, right 속성을 이용하여 위치를 조절
+		 - + 값이면 요소 안쪽으로 향하고, -값이면 요소 바깥쪽으로 향함
+
+		-relative
+		 -요소의 상대 위치를 계산해서 배치
+		 -요소가 원래 있어야 할 위치에서 top, botton, left, right 속성값에 따라 이동
+		 -자손 요소 중 position:absolute인 요소의 기준점이 된다.
+		-absolute
+		 -기준 요소를 기준으로 배치
+		 -top, botton, left, right 속성을 이용하여 위치를 조절
+		 -기준 요소
+		  -absolute가 적용된 요소의 조상 요소 중 position: relative나 position:absolute인 요소가 있는 가장 가까운 조상이 기준요소
+			-기준 요소가 없으면 브라우저가 기준
+		-top, botton, left, right를 이용하여 width와 height를 대신할 수 있음
+		-absolute가 적용된 요소는 부모 요소 높이에 영향을 주지 않음
+	 -->
+		<h2>position 속성 예제</h2>
+		<h2>relative</h2>
+		<div class="container">
+			<div class="box">H</div>
+			<div class="box">E</div>
+			<div class="box">L</div>
+			<div class="box">L</div>
+			<div class="box">O</div>
+		</div>
+		<h2>absolute 예제</h2>
+		 <div class="container2">
+			<div class="box1">1</div>
+			<div class="inner-container">
+			 <div class="box1">2</div>
+			 <div class="box1">3</div>
+			</div>
+		 </div>
+		 <h2>fixed 예제</h2>
+		 <div class="box5"></div>
+
+</body>
+</html>
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>opacity 속성 예제
+		<!-- 
+		opacity (교재. p156)
+		-요소의 투명도를 설정
+		-0~1 사리의 실수
+		-0이면 투명, 1이면 불투명
+		-부모 요소에 투명도가 적용되면 자식 요소에도 적용 됨
+		=> 자식 요소에 투명도를 1로 해도 투명이 됨
+		=> 배경색을 rgb로 이용하는게 좋을수도 있음
+		 -->
+	</title>
+	<style>
+		.container{
+			opacity: 0.4;
+			background-color: red;
+		}
+	  .container > .box,
+		.container1 > .box1{
+			height: 100px;
+			background-color: red;
+			font-size: 40px;
+			font-weight: bold;
+			text-align: center;
+			line-height: 100px;
+			opacity: 1;
+		}
+		.container1{
+			background: rgba(255, 0, 0, 0.4);
+		}
+	 .container2{
+		width: 400px; height: 500px;
+		position: relative;
+	  }
+		.img{
+			background: url(../../../../static/img/버섯.jpg);
+			height: 100%;
+			opacity: 0.4;
+		}
+		.text{
+			margin: 0;
+			padding: 0;
+			width: 200px;
+			height: 50px;
+			line-height:50px;
+			text-align: center;
+			font-size: 30px;
+			font-weight: bold;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -100px;
+			margin-top: -25px;
+
+		}
+	</style>
+</head>
+<body>
+	<h1>opacity 속성 예제</h1>
+	<div class="container">
+		<div class="box">안녕하세요.</div>
+	</div>
+	<div class="container1">
+		<div class="box1">안녕하세요.</div>
+	</div>
+	<h1>이미지 위에 글자 배치: opacity 속성 적용</h1>
+	<div class="container2">
+		<div class="img"></div>
+		<p class="text">루돌프</p>
+	</div>
+</body>
+</html>
