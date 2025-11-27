@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.container1{
+			background-color: yellow;
+			display: flex;
+			flex-direction: column;
+			align-content: center;
+		  height: 100px;
+		}
+		.container1 .box{
+			width: 100px; height: 100px; background-color: red;
+			line-height: 100px;
+			text-align: justify;
+		}
+
+		.container2 .box{
+			width: 100px; height: 100px; background-color: red;
+
+		}
+		.container2{
+			background-color: yellow; margin-top: 30px; height: 200px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			align-content: space-evenly;
+		}
+		.container4{
+			background-color: yellow;
+			margin-top: 30px;
+			display: flex;
+			flex-direction:row;
+			width: 1000px
+
+		}
+		.container4 .box{
+			width: 100px; height: 100px; background-color: red; 
+			justify-content: center;
+			}
+		.box3{
+			
+			
+		 }
+		.box4{
+			
+			
+			}
+
+		</style>
+
+</head>
+<body>
+	<!--  -->
+	<div class="container1">
+		<div class="box">가운데 정렬  </div>
+	</div>
+
+	<!-- 아래 같은 구조로 되어 있는 화면에서 flex를 이용하여 요소가 가운데(상하, 좌우) 정렬이 되도록 작성 -->
+	 <div class="container2">
+		<div class="box">가운데 정렬</div>
+	 </div>
+
+		<div class="container4">
+			<div class="box box3">1</div>
+			<div class="box box4">2</div>
+			<div class="box box4">3</div>
+			<div class="box box4">4</div>
+		</div>
+</body>
+</html>

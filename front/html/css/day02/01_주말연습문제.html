@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	*{margin: 0; padding: 0;}
+	ul{list-style: none;}
+	a{text-decoration: none; color: black;}
+	.shopping-item{float: left; margin-right: 10px; margin-bottom: 10px;
+	}
+	.clearfix::after{clear: both; content: ''; display: block;}
+	.shopping-img-container{width: 150px; height: 200px; overflow: hidden; display: block;
+                         	border-radius: 5px; box-shadow: 0 0 0 1px rgba(0,0,0,0.1);}
+	.shopping-item:hover .shopping-img{transform: scale(1.03);}
+	.shopping-img{transition: transform 0.3s;}
+	.shopping-title{margin-top: 10px; display: block;}
+	.shopping-title:hover{text-decoration: underline;}
+	.shopping-title p{line-height: 16px; font-size: 14px;}
+
+</style>
+<body>
+	<!-- 
+	네이버 쇼핑몰 아이템 -->
+	<h1>연습 문제</h1>
+	<ul class="shopping-list clearfix">
+		<li class="shopping-item">
+			<a href="" class="shopping-list">
+				<span class="shopping-img-container">
+					<img class="shopping-img" src="../../../../static/img/버섯.jpg" alt="쇼핑아이템">
+				</span>
+				<span class="shopping-title">
+					<p>할인</p>
+					<p>겨울 할인 행사</p>
+				</span>
+			</a>
+		</li>
+		<li class="shopping-item">
+			<a href="" class="shopping-list">
+				<span class="shopping-img-container">
+					<img class="shopping-img" src="../../../../static/img/버섯.jpg" alt="쇼핑아이템">
+				</span>
+				<span class="shopping-title">
+					<p>할인</p>
+					<p>겨울 할인 행사</p>
+				</span>
+			</a>
+		</li>
+		<li class="shopping-item">
+			<a href="" class="shopping-list">
+				<span class="shopping-img-container">
+					<img class="shopping-img" src="../../../../static/img/버섯.jpg" alt="쇼핑아이템">
+				</span>
+				<span class="shopping-title">
+					<p>할인</p>
+					<p>겨울 할인 행사</p>
+				</span>
+			</a>
+		</li>
+		<li class="shopping-item">
+			<a href="" class="shopping-list">
+				<span class="shopping-img-container">
+					<img class="shopping-img" src="../../../../static/img/버섯.jpg" alt="쇼핑아이템">
+				</span>
+				<span class="shopping-title">
+					<p>할인</p>
+					<p>겨울 할인 행사</p>
+				</span>
+			</a>
+		</li>
+	</ul>
+	
+</body>
+</html>

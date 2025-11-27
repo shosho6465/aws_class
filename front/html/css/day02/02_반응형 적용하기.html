@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>반응형 적용하기</title>
+	<style>
+		.box{
+			height: 100px; border: 1px solid black;
+			float: left;
+			box-sizing: border-box;
+			width: 100%;
+		}
+    /* 이 조건에 만족하면 {이 속성을 적용하라} 순서에 의한 우선순위에 따라 적용이 안될 수 있음*/ 
+		@media screen and (min-width: 576px){
+			.box{
+				width: 50%;
+			}}
+			@media screen and (max-width: 992px){
+			.box{
+				width: 100%;
+			}}
+			/* min과 max를 모두 써서 특정 범위를 지정해놓으면 우선순위에 의해 밀려나는 상황 발생 x */
+			@media screen and (min-width: 576px) and (max-width: 992px){
+			.box{
+				width: 50%;
+			}}
+			@media screen and (min-width: 992px) and (max-width: 1400px){
+			.box{
+				width: 33.33%;
+			}}
+			@media screen and (min-width: 1400px){
+			.box{
+				width: 25%;
+			}}
+</style >
+<!-- 방법1 -->
+ <style media="screen and (max-width: 575px)">
+	.box{font-size: 10px;}
+ </style>
+  <style media="screen and (max-width: 992px)">
+	.box{font-size: 10px;}
+ </style>
+  <style media="screen and (min-width: 576px) and (max-width: 992px)">
+	.box{font-size: 10px;}
+ </style>
+  <style media="screen and (min-width: 992px) and (max-width: 1400px)">
+	.box{font-size: 10px;}
+ </style>
+ <style media="screen and (min-width: 1400px)">
+	.box{font-size: 10px;}
+ </style>
+ <!-- PC 이상 화면에서 적용 -->
+ <link rel="stylesheet" href="" media="screen and (min-width:992px)">
+</head>
+<body>
+	<!-- 
+	반응형
+	-웹을 보는 장치에 따라 보이는 화면이 다른 경우
+	-예로 m.naver.com
+	-모바일로 보는 건 거의 반응형이다.
+	1. pc 용 따로 모바일 따로 만듬 2. 한 화면에서 둘 다 적용되게 하는 경우
+	
+	반응형 적용 방법
+	1. style 태그 안(css 파일 안)에 @media 쿼리 이용
+	2. style, link 태그에 media 속성을 이용
+	
+	min-width/min-height
+	-최소 너비/높이
+	
+	max-width/max-height
+	-최대 너비/높이
+	
+	부트스트랩에서 사용하는 반응형 기준(표준 x)
+	-xs: w < 576px (모바일)
+	-sm: w >=576px (모바일 큰 화면)
+	-md: w >=768px (태블릿)
+	-1g: w >=992px(작은 pc 화면)
+	-x1: w >=1200px (큰 px 화면)
+	-xx1: w >= 1400px (초대형 화면)
+	-->
+
+	<div class="container">
+		<div class="box">1</div>
+		<div class="box">2</div>
+		<div class="box">3</div>
+		<div class="box">4</div>
+		<div class="box">5</div>
+		<div class="box">6</div>
+
+	</div>
+</body>
+</html>

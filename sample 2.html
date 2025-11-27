@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>가운데 점 만들기</title>
+	<style>
+		.container{ float	: left;}
+	
+    .news-title{
+			line-height: 30px;
+			border: 1px solid black;
+
+		}
+		.active{
+			
+			position: relative;
+			font-size: 20px;
+			text-align: justify;
+			padding-right: 30px;
+		}
+		.active::after{
+			content: '';
+			width: 10px;
+			height: 10px;
+			border: 1px solid black;
+			border-radius: 100%;
+			background-color: bisque;
+			position: absolute;
+			right: 10px;
+			top: 10px;
+		}
+		.edit{
+			
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>글자 사이에 가운데 점 예제(네이버)</h1>
+	<div class="container">
+		<div class="news-title">
+			<span class="text active">뉴스 스탠드</span>
+			<span class="text edit">언론사 편집</span>
+		</div>
+	</div>
+</body>
+</html>
