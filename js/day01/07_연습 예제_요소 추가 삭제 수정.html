@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>존경하는 위인 추가하기</h1>
+	<form action="" id="form">
+		<input type="text" id="input">
+		<button type="submit">등록</button>
+	</form>
+	<ul class="list">
+		<li>
+			<span>이순신</span>
+			<button class="btn-del">X</button>
+		</li>
+	</ul>
+
+	<script>
+		/*
+		위인을 등록하고, X버튼을 누르면 삭제되는 코드를 구현
+
+		input의 텍스트 클릭했을 때 list 추가
+		X버튼 클릭했을 때 list 삭제
+
+		*/
+	const form = document.querySelector("#form");
+	const input = document.querySelector("#input");
+	const btn = document.querySelector("button");
+	const list = document.querySelector(".list");
+
+input.addEventListener("click", function(){
+	list.append(input.value)
+	form
+})
+btn.addEventListener("click", function(){
+	list.remove()
+})
+
+
+
+
+  </script>
+</body>
+</html>

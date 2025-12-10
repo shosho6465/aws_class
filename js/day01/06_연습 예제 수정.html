@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>수정 연습 예제</title>
+</head>
+<body>
+	<ul>
+		<li class="item">사과</li>
+		<li class="item">바나나</li>
+		<li class="item">오렌지</li>
+	</ul>
+
+	<script>
+		/*
+		li태그를 클릭하면 prompt를 띄우고,
+		내용을 입력하고 확인을 누르면 해당 li태그의 내용이 변경되도록 작성 
+		*/
+
+		/* 
+		li태그
+		li태그 클릭 이벤트
+		prompt
+		prompt 텍스트 가져오기
+		확인을 누르면 해당 li태그 선택
+		li태그 내용 변경
+		*/
+		const list = document.querySelector("li");
+		list.addEventListener("click", function(){
+			let prompt = prompt("내용을 입력하세요", 사과);
+		});
+		if(prompt.textContent = prompt.value;){
+     list.value = "";
+			list.dataset.target = prompt.value;
+		}
+			
+
+
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>존경하는 위인 등록하기</h1>
+	<form action="" id="form">
+		<input type="text" id="input">
+		<button type="button">등록</button>
+	</form>
+	<ul class="list"></ul>
+
+	<script>
+		/*
+		위인을 입력하고 엔터 또는 등록을 클릭했을 때 입력한 위인이 list에 추가 되도록 작성
+		-조건
+		1. 위인명 앞 뒤로 들어간 공백은 제거
+		2. 공백으로만 된 경우 입력하세요라고 출력 후 입력창을 비움
+		*/
+		const btn = document.querySelector("button");
+		const input = document.querySelector("input")
+		let text = input.value.trim();
+			
+		btn.addEventListener("click", function(e){
+			//input.value
+			document.createElement("li")
+			//let li = createElement("li", text)
+			
+			
+		});
+		form.addEventListener("submit", function(){
+			e.preventDefault();
+
+		})
+		
+	</script>
+</body>
+</html>

@@ -23,12 +23,12 @@
 		const btn1 = document.getElementById("btn1");
 		const box1 = document.getElementsByClassName("box1")[0];
 
-		btn1.addEventListner("click", ()=>{
+		btn1.addEventListener("click", ()=>{
 			//클래스가 box1인 요소의 글자를 가져와서 alert로 띄움
       let text = box1.innerText;
 		  alert(text)
 		});
-		btn2.addEventListner("click", ()=>{
+		btn2.addEventListener("click", ()=>{
 			box1.textContent = "안녕히가세요.";
 		})
 		
