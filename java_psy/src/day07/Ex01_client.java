@@ -37,7 +37,7 @@ public class Ex01_client {
 				System.out.println("[클라이언트가 전송한 메시지"]);
 				try {
 					ObjectInputStream ois 
-					= new ObjectInputStream(socket.getInpitStream());
+					= new ObjectInputStream(socket.getInputStream());
 					while(true) {
 						String msg = ois.readUTF();
 						System.out.println("클라이언트 : " + msg);
