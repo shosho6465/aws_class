@@ -1,9 +1,23 @@
+/*
+이벤트 등록 시 주의사항
+ -on이벤트명에서 이벤트명은 대문자로 시작(리액트)
+ -on이벤트명에서 이벤트명은 소문자로 시작(js)
+*/
+
 //한번도 사용하지 않은 컴포넌트의 함수명은 옅은 회색이다. > export 하면 검정색으로 바뀜
 function Btn1(){
+
+	// function btnClick(){
+	// 	alert("클릭");
+	
+	//버튼 클릭할 때 호출될 함수
+	const btnClick = () =>{alert("클릭");}
+
 	return(
-		<button>일반 버튼1</button>
+		<button onClick={btnClick}>일반 버튼1</button>
 	);
-}
+	}
+	
 
 const Btn2 = () => {
 	return (

@@ -2,13 +2,13 @@
 //import 컴포넌트명 from '컴포넌트js파일명'
 //import {컴포넌트1, 컴포넌트2} from '컴포넌트js파일명';
 
-import {Btn1, Btn2} from "./Btns";
+import {Btn1, Btn2, Btn3, Btn4} from "./Btns";
 import Select from "./Input";
 
 /*
 컴포넌트 생성 방법
 1. 함수로 생성
-   -함수로 생성하는 방법이 대세
+   -함수로 생성하는 방법이 대세s
 2. 클래스로 생성
 
 컴포넌트 생성 방법(함수)
@@ -56,9 +56,9 @@ const App = function() {
       <Btn1 />
       <Btn2 />
       <Select />
-      <Btn3 text="{btnName1}" color="red" />
+      <Btn3 text={btnName1} color="red" />
       <Btn3 />
-      <Btn4 text="{btnName2}" color="blue" />
+      <Btn4 text={btnName2} color="blue" />
       {/* 리액트에서 for 속성은 htmlFor로 써야한다. */}
       <label htmlFor="id">아이디</label>
       <input type="text" id="id"></input>
