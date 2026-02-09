@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+.menu-list{
+	display: flex;
+}
+
+.menu-item{
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	border: 3px solid black;
+	width: 100%;
+}
+.menu-item+.menu-item{
+	margin-left: -3px;
+}
+.menu-item.active{
+	background-color: yellow;
+}

@@ -16,6 +16,20 @@ public class PageMaker {
 	private boolean prev;//이전버튼 활성화
 	private boolean next;//다음버튼 활성화
 	
+	private Criteria cri;       // 현재 페이지 번호, 한 페이지당 개수 정보      // 화면에 보여질 끝 페이지 번호
+     // 다음 버튼 활성화 여부
+
+    // [중요] 컨트롤러에서 pm.setCri(cri)를 쓸 수 있게 해주는 메서드
+    public void setCri(Criteria cri) {
+        this.cri = cri;
+    }
+
+    // [중요] 컨트롤러에서 pm.setTotalCount(totalCount)를 쓸 수 있게 해주는 메서드
+    public void setTotalCount(int totalCount) {
+        this.totalCount = totalCount;
+        // 여기서 보통 시작/끝 페이지를 계산하는 로직이 들어갑니다.
+    }
+	
 	private int displayPageNum;//한 페이지네이션에서 보여준 페이지의 최대 숫자 개수
 	
 	//현재 페이지 정보를 관리. 검색어, 검색 타입, 게시판등
@@ -44,10 +58,14 @@ public class PageMaker {
 		//마지막 페이지네이션이면 false 아니면 true
 		next = endPage == tmpEndPage ? false : true;
 	}
-	public PageMaker(int displayPageNum, Criteria cri, int totalCount) {
+	public PageMaker() {
 		this.displayPageNum = displayPageNum;
 		this.cri = cri;
 		this.totalCount = totalCount;
 		calculate();
+	}
+
+	public PageMaker() {
+		// TODO Auto-generated constructor stub
 	}
 }

@@ -9,7 +9,7 @@ function App7(){
 	let[isOpen, setOpen] = useState(true);
 
 	//isOpen이 true이면 false로, false이면 true로. setOpen을 이용.
-	const btnClick = (isOpen) => {setOpen(!isOpen)}
+	const btnClick = (isOpen) => {setOpen(!isOpen);}
 
 
 	return (

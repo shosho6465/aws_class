@@ -1,31 +1,16 @@
 package kr.hi.community.dao;
 
 import java.util.List;
-
 import org.apache.ibatis.annotations.Param;
-
-import kr.hi.community.model.dto.CommentDTO;
 import kr.hi.community.model.util.Criteria;
 import kr.hi.community.model.vo.CommentVO;
 
 public interface CommentDAO {
 
-	void insertComment(@Param("coDto")CommentDTO dto);
+    // 특정 게시글의 전체 댓글 개수 조회 (삭제되지 않은 것)
+    int selectTotalCount(@Param("po_num") int po_num);
 
-	List<CommentVO> selectCommentList(@Param("cri")Criteria cri);
-
-	int selectCommentCount(@Param("cri")Criteria cri);
-
-	CommentVO selectComment(@Param("coNum")int coNum);
-
-	/*update, insert, delete는 반환값이 boolean 또는 int로 설정할 수 있는데,
-	 * 설정하면
-	 * 해당 쿼리가 적용된 행이 있으면 true, 없으면 false로 반환하고,
-	 * int일 때 해당 쿼리가 적용된 행의 개수를 반환
-	 */
-	
-	boolean deleteComment(@Param("coNum")int coNum);
-
-	boolean updateComment(@Param("dto")CommentDTO dto);
+    // 특정 게시글의 댓글 목록 조회 (페이징, 정렬 조건 포함)
+    List<CommentVO> selectCommentList(@Param("po_num") int po_num, @Param("cri") Criteria cri);
 
 }
